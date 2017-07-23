@@ -1,4 +1,4 @@
-package package ${relativePackage}
+package ${relativePackage}
 
 import android.content.Context
 import android.content.Intent
@@ -19,7 +19,7 @@ ${viewInterface} {
 override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
 super.onCreate(savedInstanceState, persistentState)
 activityComponent.inject(this)
-setAndBindContentView(savedInstanceState, R.${layoutName})
+setAndBindContentView(savedInstanceState, R.layout.${layoutName})
 setSupportActionBar(binding.appBarContainer.toolbar)
 }
 

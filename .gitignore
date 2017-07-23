@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.gitignore
+.idea/android-studio-plugin.iml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/workspace.xml

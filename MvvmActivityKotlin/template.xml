@@ -2,10 +2,10 @@
 <template
     format="5"
     revision="5"
-    name="MVP Activity (kotlin)"
-    description="Creates a new MVP template">
+    name="MVVM Activity (kotlin)"
+    description="Creates a new MVVM template">
 
-    <category value="InFullMvp" />
+    <category value="MVVM" />
     <formfactor value="Mobile" />
 
     <parameter
@@ -13,7 +13,7 @@
         name="Activity Name"
         type="string"
         constraints="class|unique|nonempty"
-        default="MvpActivity"
+        default="MainActivity"
         help="The name of the activity class to create" />
 
     <parameter
@@ -39,22 +39,6 @@
         constraints="package|exists|nonempty"
         suggest="${applicationPackage}"
         help="Path to .R of this app/module" />
-
-    <parameter
-        id="useApplicationComponent"
-        name="Use ApplicationComponent"
-        type="boolean"
-        default="true"
-        help="If true, ApplicationComponent will be used in generated Graph" />
-
-    <parameter
-        id="appComponentPackage"
-        name="Application Path"
-        type="string"
-        constraints="package|empty"
-        suggest="${packageName}.application"
-        visibility="useApplicationComponent"
-        help="Package where we can find di.ApplicationComponent and di.Components" />
 
     <thumbs>
         <thumb>template_infullmvp.png</thumb>
