@@ -7,7 +7,7 @@ import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import ${rPackage}.R
-import ${rPackage}.databinding.ActivityGeneratorBinding
+import ${rPackage}.databinding.${(underscoreToCamelCase(layoutName))}Binding
 import ${rPackage}.ui.base.BaseActivity
 
 class ${activityClass} : BaseActivity<
