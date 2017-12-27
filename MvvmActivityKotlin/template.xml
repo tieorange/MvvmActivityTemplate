@@ -41,7 +41,7 @@
         help="Path to .R of this app/module" />
 
     <thumbs>
-        <thumb>template_infullmvp.png</thumb>
+        <thumb>templatePic.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl" />

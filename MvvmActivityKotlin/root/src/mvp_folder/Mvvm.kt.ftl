@@ -10,5 +10,4 @@ interface View : MvvmView
 interface ViewModel : MvvmViewModel<View> {
 
     }
-
-    }
+}

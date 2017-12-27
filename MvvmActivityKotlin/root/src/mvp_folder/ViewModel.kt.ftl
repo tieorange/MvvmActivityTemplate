@@ -10,12 +10,15 @@ import javax.inject.Inject
 @PerActivity
 class ${viewModelClass}
 @Inject
-constructor(@AppContext private val context: Context)
-: RxBaseViewModel<${viewInterface}>(),
-    ${viewModelInterface} {
+constructor(
+@ActivityContext private val context: Context
+private val myApi: MyApi,
+private val loginManager: LoginManager,
+private val errorHandler: ErrorHandler
+): RxBaseViewModel<${viewInterface}>(), ${viewModelInterface} {
 
     override fun attachView(view: ${viewInterface}, savedInstanceState: Bundle?) {
     super.attachView(view, savedInstanceState)
     }
 
-    }
+}

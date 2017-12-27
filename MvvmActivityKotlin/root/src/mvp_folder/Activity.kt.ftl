@@ -10,14 +10,15 @@ import ${rPackage}.R
 import ${rPackage}.databinding.${(underscoreToCamelCase(layoutName))}Binding
 import ${rPackage}.ui.base.BaseActivity
 
-class ${activityClass} : BaseActivity<
-${(underscoreToCamelCase(layoutName))}Binding,
-${viewInterface},
-${viewModelInterface}>(),
-${viewInterface} {
+class ${activityClass}
+    : BaseActivity<
+    ${(underscoreToCamelCase(layoutName))}Binding,
+    ${viewInterface},
+    ${viewModelInterface}>(),
+    ${viewInterface} {
 
-override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-super.onCreate(savedInstanceState, persistentState)
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
 activityComponent.inject(this)
 setAndBindContentView(savedInstanceState, R.layout.${layoutName})
 setSupportActionBar(binding.appBarContainer.toolbar)
@@ -25,7 +26,7 @@ setSupportActionBar(binding.appBarContainer.toolbar)
 
 override fun onCreateOptionsMenu(menu: Menu): Boolean {
 super.onCreateOptionsMenu(menu)
-menuInflater.inflate(R.menu.${activityClass}_menu, menu)
+menuInflater.inflate(R.menu.${camelCaseToUnderscore(activityClass)}_menu, menu)
 return true
 }
 
