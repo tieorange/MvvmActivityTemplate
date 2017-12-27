@@ -10,10 +10,10 @@
 
     <global id="viewClass" value="${underscoreToCamelCase(classToResource(activityClass))}View"/>
     <global id="modelClass" value="${underscoreToCamelCase(classToResource(activityClass))}Model"/>
-    <global id="presenterClass" value="${underscoreToCamelCase(classToResource(activityClass))}Presenter"/>
-    <global id="viewModelClass" value="${underscoreToCamelCase(classToResource(activityClass))}ViewModel"/>
-    <global id="viewModelInterface" value="${underscoreToCamelCase(classToResource(activityClass))}Mvvm.ViewModel"/>
-    <global id="viewInterface" value="${underscoreToCamelCase(classToResource(activityClass))}Mvvm.View"/>
-    <global id="mvvmInterface" value="${underscoreToCamelCase(classToResource(activityClass))}Mvvm"/>
+    <global id="presenterClass" value="${underscoreToCamelCase(classToResource(activityClass))}FragmentPresenter"/>
+    <global id="viewModelClass" value="${underscoreToCamelCase(classToResource(activityClass))}FragmentViewModel"/>
+    <global id="viewModelInterface" value="${underscoreToCamelCase(classToResource(activityClass))}FragmentMvvm.ViewModel"/>
+    <global id="viewInterface" value="${underscoreToCamelCase(classToResource(activityClass))}FragmentMvvm.View"/>
+    <global id="mvvmInterface" value="${underscoreToCamelCase(classToResource(activityClass))}FragmentMvvm"/>
 
 </globals>

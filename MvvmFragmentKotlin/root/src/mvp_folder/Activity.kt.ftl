@@ -1,43 +1,22 @@
 package ${relativePackage}
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import ${rPackage}.R
 import ${rPackage}.databinding.${(underscoreToCamelCase(layoutName))}Binding
-import ${rPackage}.ui.base.BaseActivity
+import ${rPackage}.ui.base.BaseFragment
 
 class ${activityClass}
-    : BaseActivity<
+    : BaseFragment<
     ${(underscoreToCamelCase(layoutName))}Binding,
     ${viewInterface},
     ${viewModelInterface}>(),
     ${viewInterface} {
 
-override fun onCreate(savedInstanceState: Bundle?) {
-super.onCreate(savedInstanceState)
-activityComponent.inject(this)
-setAndBindContentView(savedInstanceState, R.layout.${layoutName})
-setSupportActionBar(binding.appBarContainer?.toolbar)
-}
-
-override fun onCreateOptionsMenu(menu: Menu): Boolean {
-super.onCreateOptionsMenu(menu)
-menuInflater.inflate(R.menu.${camelCaseToUnderscore(activityClass)}_menu, menu)
-return true
-}
-
-override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-when (item?.itemId) {
-}
-return true
-}
-
-companion object {
-fun startActivity(context: Context) {
-context.startActivity(Intent(context, ${activityClass}::class.java))
-}
-}
+override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        fragmentComponent.inject(this)
+        return setAndBindContentView(inflater, container, savedInstanceState, R.layout.${layoutName})
+    }
 }

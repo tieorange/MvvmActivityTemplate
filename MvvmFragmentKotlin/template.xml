@@ -2,7 +2,7 @@
 <template
     format="5"
     revision="5"
-    name="MVVM Activity (kotlin)"
+    name="MVVM Fragment (kotlin)"
     description="Creates a new MVVM template">
 
     <category value="MVVM" />
@@ -10,10 +10,10 @@
 
     <parameter
         id="activityClass"
-        name="Activity Name"
+        name="Fragment Name"
         type="string"
         constraints="class|unique|nonempty"
-        default="MainActivity"
+        default="MapFragment"
         help="The name of the activity class to create" />
 
     <parameter
@@ -22,7 +22,7 @@
         type="string"
         constraints="layout|unique|nonempty"
         suggest="${activityToLayout(activityClass)}"
-        default="activity_mvp"
+        default="fragment_mvp"
         help="The name of the layout to create for the activity" />
 
     <parameter
@@ -37,6 +37,7 @@
         name=".R Package"
         type="string"
         constraints="package"
+        default="com.infullmobile.app"
         help="Path to .R of this app" />
 
     <thumbs>
