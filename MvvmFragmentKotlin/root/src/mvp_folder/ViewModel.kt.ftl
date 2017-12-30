@@ -3,13 +3,13 @@ package ${relativePackage}
 import android.content.Context
 import android.os.Bundle
 import ${rPackage}.injection.qualifier.ActivityContext
-import ${rPackage}.injection.scopes.PerActivity
+import ${rPackage}.injection.scopes.PerFragment
 import ${rPackage}.ui.base.viewmodel.RxBaseViewModel
 import ${rPackage}.util.ErrorHandler
 import ${rPackage}.util.LoginManager
 import javax.inject.Inject
 
-@PerActivity
+@PerFragment
 class ${viewModelClass}
 @Inject
 constructor(

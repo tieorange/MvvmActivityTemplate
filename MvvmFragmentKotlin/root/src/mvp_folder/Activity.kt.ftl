@@ -15,7 +15,7 @@ class ${activityClass}
     ${viewModelInterface}>(),
     ${viewInterface} {
 
-override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         fragmentComponent.inject(this)
         return setAndBindContentView(inflater, container, savedInstanceState, R.layout.${layoutName})
     }
